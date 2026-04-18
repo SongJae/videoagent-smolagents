@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude / Gradio caches
+.claude/
+.gradio/
+
+# Third-party vendored libs (installed via `pip install -e`)
+smolagents/
+perception_models/
+SAM3_tracking/sam3/
+
+# Map assets (downloaded separately)
+map_mcp/tiles/
+map_mcp/milsymbol/
+
+# Local data / indexes / checkpoints
+data/
+*.index
+*.faiss
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+checkpoints/
+
+# Reference materials (not part of codebase)
+references_source/
+*.pdf
+
+# Temp
+*.log
+tmp/
+temp/

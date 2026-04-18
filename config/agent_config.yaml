@@ -1,0 +1,41 @@
+# Agent Configuration
+
+# CodeAgent settings
+code_agent:
+  executor_type: "local"  # local, e2b, docker
+  max_steps: 15
+  planning_interval: 3
+  stream_outputs: false  # VLLMModel does not support streaming
+  additional_authorized_imports:
+    - "json"
+    - "numpy"
+    - "datetime"
+    - "typing"
+    - "collections"
+
+# RAG settings
+rag:
+  vector_db: "faiss"  # faiss or chromadb
+  chunk_size: 512
+  chunk_overlap: 50
+  top_k: 5
+  similarity_threshold: 0.7
+  pdf_storage_path: "./data/pdfs"
+  index_storage_path: "./data/rag_index"
+
+# Gradio UI settings
+ui:
+  server_name: "0.0.0.0"
+  server_port: 7860
+  share: true  # Set to true for public link
+  title: "Battlefield Reconnaissance Video Agent"
+  description: |
+    Upload and analyze drone footage to identify events, track objects, and query battlefield situations.
+    This system uses state-of-the-art AI models for object detection, tracking, and event description.
+  examples:
+    - "How many tanks appear in the video?"
+    - "Describe the soldier movements in the first 2 minutes"
+    - "Find all segments where trucks are detected"
+    - "What events happened around timestamp 01:30?"
+    - "Count the total number of soldiers detected across all segments"
+  theme: "default"

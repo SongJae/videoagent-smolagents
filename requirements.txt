@@ -1,0 +1,59 @@
+# Core Dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.40.0
+numpy>=1.24.0
+pillow>=10.0.0
+opencv-python>=4.8.0
+PyYAML>=6.0
+
+# Object Detection
+scipy>=1.11.0
+
+# Video Processing
+supervision>=0.20.0
+
+# Embedding and VLM Models
+# PE-Core requirements
+huggingface-hub>=0.20.0
+
+# SmolVLM2 requirements
+accelerate>=0.20.0
+num2words>=0.5.12
+
+# VideoDB
+# Install from local: pip install -e videodb-python/
+requests>=2.31.0
+
+# RAG and Vector Search
+PyPDF2>=3.0.0
+faiss-cpu>=1.7.4  # Use faiss-gpu if GPU support is needed
+
+# Smolagents
+# Install from local: pip install -e smolagents/
+
+# VLLM for Agent Model
+vllm>=0.3.0
+
+# Gradio UI
+gradio>=4.0.0
+folium>=0.14.0  # Interactive map visualization for battlefield display
+
+# Optional but Recommended
+tqdm>=4.65.0
+scikit-learn>=1.3.0  # For clustering and PCA in embedding_utils
+
+# SAM2 Requirements (if using SAM2 tracking)
+# Note: SAM2 may require installation from source
+# git+https://github.com/facebookresearch/segment-anything-2.git
+
+# MCP (Model Context Protocol) for closed network map operations
+# Install with: pip install 'smolagents[mcp]'
+# Or manually:
+mcp>=1.0.0
+mcpadapt>=0.1.13
+
+# Development Tools (Optional)
+ipython>=8.12.0
+jupyter>=1.0.0
+matplotlib>=3.7.0

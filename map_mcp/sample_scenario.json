@@ -1,0 +1,138 @@
+{
+  "center": [
+    37.5665,
+    126.978
+  ],
+  "zoom": 11,
+  "markers": [],
+  "polylines": [],
+  "polygons": [],
+  "circles": [],
+  "geojson_layers": [],
+  "military_units": [
+    {
+      "id": "unit_3c3a1513",
+      "name": "1st Infantry Platoon",
+      "sidc": "10031000141211000000",
+      "affiliation": "FRIEND",
+      "unit_type": "INFANTRY",
+      "echelon": "PLATOON",
+      "location": [
+        37.57,
+        126.97
+      ],
+      "strength": 30,
+      "designation": "1-A-1",
+      "higher_formation": null,
+      "direction": null,
+      "speed": null,
+      "status": "present",
+      "waypoints": [
+        [
+          37.575,
+          126.975
+        ],
+        [
+          37.58,
+          126.98
+        ]
+      ],
+      "reinforced": false,
+      "reduced": false,
+      "is_headquarters": false
+    },
+    {
+      "id": "unit_2c83a30b",
+      "name": "2nd Armor Company",
+      "sidc": "10031000151205000000",
+      "affiliation": "FRIEND",
+      "unit_type": "ARMOR",
+      "echelon": "COMPANY",
+      "location": [
+        37.56,
+        126.96
+      ],
+      "strength": 60,
+      "designation": "2-A",
+      "higher_formation": null,
+      "direction": null,
+      "speed": null,
+      "status": "present",
+      "waypoints": [
+        [
+          37.565,
+          126.97
+        ]
+      ],
+      "reinforced": false,
+      "reduced": false,
+      "is_headquarters": false
+    },
+    {
+      "id": "unit_a9d5b6d8",
+      "name": "HQ Battalion",
+      "sidc": "10031001161100000000",
+      "affiliation": "FRIEND",
+      "unit_type": "HEADQUARTERS",
+      "echelon": "BATTALION",
+      "location": [
+        37.55,
+        126.95
+      ],
+      "strength": null,
+      "designation": "HQ-1",
+      "higher_formation": null,
+      "direction": null,
+      "speed": null,
+      "status": "present",
+      "waypoints": [],
+      "reinforced": false,
+      "reduced": false,
+      "is_headquarters": true
+    },
+    {
+      "id": "unit_4f6acc12",
+      "name": "Enemy Infantry Battalion",
+      "sidc": "10061000161211000000",
+      "affiliation": "HOSTILE",
+      "unit_type": "INFANTRY",
+      "echelon": "BATTALION",
+      "location": [
+        37.58,
+        127.0
+      ],
+      "strength": null,
+      "designation": null,
+      "higher_formation": null,
+      "direction": null,
+      "speed": null,
+      "status": "present",
+      "waypoints": [],
+      "reinforced": false,
+      "reduced": false,
+      "is_headquarters": false
+    },
+    {
+      "id": "unit_20d7a867",
+      "name": "Enemy Artillery Battery",
+      "sidc": "10061000151303000000",
+      "affiliation": "HOSTILE",
+      "unit_type": "ARTILLERY",
+      "echelon": "COMPANY",
+      "location": [
+        37.59,
+        127.01
+      ],
+      "strength": null,
+      "designation": null,
+      "higher_formation": null,
+      "direction": null,
+      "speed": null,
+      "status": "present",
+      "waypoints": [],
+      "reinforced": false,
+      "reduced": false,
+      "is_headquarters": false
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+# Model Configuration for Battlefield Reconnaissance Video Agent
+
+# SAM3 Object Detection and Tracking Model
+# Uses Hugging Face transformers library for SAM3 integration
+# Requires: pip install transformers>=4.47.0
+object_detection:
+  device: "cuda"
+  target_classes:
+    - "soldier"
+    - "tank"
+    - "truck"
+  # Confidence threshold for detections (0.0 - 1.0)
+  confidence_threshold: 0.3
+  sam3_config:
+    # Hugging Face model name for SAM3
+    model_name: "facebook/sam3"
+    # IoU threshold for deduplication (when multiple prompts detect same object)
+    iou_threshold: 0.5
+  # Legacy parameter kept for compatibility (not used with transformers)
+  gpus_to_use: null
+
+# PE-Core-L14-336 Embedding Model
+embedding_model:
+  model_name: "PE-Core-L14-336"
+  device: "cuda"
+  image_size: 336
+  embedding_dim: 1024
+  normalize: true
+  batch_size: 8
+
+# SmolVLM2 2.2B Event Description Model
+vlm_model:
+  model_name: "HuggingFaceTB/SmolVLM2-2.2B-Instruct"
+  device: "cuda"
+  max_tokens: 512
+  temperature: 0.7
+  batch_size: 4
+
+# EXAONE-4.0-32B-AWQ Agent Model
+agent_model:
+  model_id: "LGAI-EXAONE/EXAONE-4.0-32B-AWQ"
+  # vLLM engine configuration (passed to model_kwargs)
+  tensor_parallel_size: 1
+  gpu_memory_utilization: 0.65
+  dtype: "float16"
+  quantization: "awq"
+  max_model_len: 32768
+  # NOTE: temperature and max_tokens should NOT be passed to VLLMModel init
+  # They are per-request parameters, not model initialization parameters
+  # VLLMModel.generate() has default values: temperature=0.0, max_tokens=2048
+  # If you need different values, pass them when calling agent.run(temperature=X, max_tokens=Y)
+  # These config values are kept for documentation but not used
+  # temperature: 0.1
+  # max_tokens: 2048

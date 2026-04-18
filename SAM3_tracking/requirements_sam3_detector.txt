@@ -1,0 +1,21 @@
+# SAM3 Video Detector Requirements
+# Install with: pip install -r requirements_sam3_detector.txt
+
+# Core dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.47.0
+
+# Video processing
+opencv-python>=4.8.0
+
+# Utilities
+numpy>=1.24.0
+tqdm>=4.65.0
+
+# Visualization and filtering (recommended for improved version)
+supervision>=0.26.0
+
+# Optional: For better performance
+# accelerate>=0.20.0
+# bitsandbytes>=0.41.0

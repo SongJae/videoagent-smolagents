@@ -1,0 +1,38 @@
+[project]
+name = "map-mcp"
+version = "0.1.0"
+description = "Offline map rendering and interaction via MCP with Gradio UI"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "gradio>=4.0.0",
+    "pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+download = [
+    "requests>=2.31.0",
+    "tqdm>=4.66.0",
+]
+
+[project.scripts]
+map-mcp-server = "map_mcp.server:main"
+map-mcp-ui = "map_mcp.gradio_ui:main"
+map-mcp-download = "map_mcp.tile_downloader:main"
+wargame-mcp-server = "map_mcp.wargame_server:main"
+wargame-ui = "map_mcp.wargame_ui:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/map_mcp"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/map_mcp/assets" = "map_mcp/assets"

@@ -1,0 +1,40 @@
+# VideoDB Configuration (Local Storage Mode)
+# Uses local_videodb module for offline operation
+
+# Connection settings
+connection:
+  collection_name: "battlefield_reconnaissance"
+  collection_description: "Battlefield reconnaissance drone footage analysis"
+
+# Local storage settings
+storage:
+  local_path: "./data/local_videodb"  # Path to local video database (uses local_videodb module)
+  # Storage structure:
+  # ./data/local_videodb/
+  #   ├── collections/           # Collections and videos
+  #   │   └── battlefield_reconnaissance/
+  #   │       ├── metadata.json
+  #   │       └── videos/
+  #   ├── faiss_index/          # FAISS embeddings index
+  #   │   ├── embeddings.index
+  #   │   └── embedding_map.json
+  #   └── cache/                # Temporary cache
+
+  # Storage options
+  store_object_crops: true
+  store_segment_embeddings: true
+  store_object_embeddings: true
+  store_event_descriptions: true
+  store_description_embeddings: true
+
+# Video processing settings
+video_processing:
+  default_segment_duration: 30  # seconds
+  min_segment_duration: 10
+  max_segment_duration: 300
+
+# Indexing settings
+indexing:
+  enable_spoken_words: false  # Most drone footage has no audio
+  enable_scene_index: true
+  scene_extraction_type: "time"  # time-based for consistent segments
